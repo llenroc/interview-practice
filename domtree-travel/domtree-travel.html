@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Domtree travel</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script> -->
+    </head>
+    <body>
+        <h1>Hello</h1>
+
+<ul>
+    <li>Item:
+        <ol>
+            <li>Point:
+                <div>
+                    <ul>
+                        <li>elem1</li>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </li>
+    <li>Elem2</li>
+</ul>
+<ul>
+    <li>simple list1</li>
+</ul>
+<ul>
+
+</ul>
+
+
+
+<!--   ======================================================================= -->
+    <script>
+  
+   var tree = document.querySelector('body');
+   console.log(tree);
+   solution(tree);
+
+   function solution (tree){
+      var result = 0;
+
+      if(tree.hasChildNodes){
+          var children = $(tree).children();
+
+          for(var i =0; i< children.length; i ++){
+              var childval = solution(children[i]);
+
+              if(children[i].nodeName == "LI"){
+                  var tmp = childval > 1 ? childval : 1;
+                  result = tmp > result ? tmp : result;
+              }
+
+              result = childval > result ? childval : result;
+          }
+
+          if( tree.nodeName == "UL" || tree.nodeName == "OL"){
+              if(result > 0) result ++;
+          }
+
+          return result;
+      }else{
+          return result;
+      }
+   }
+
+
+
+
+    </script>
+    <script src="domtree-travel.js" type="text/javascript"></script>   
+    </body>
+</html>

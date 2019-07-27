@@ -1,0 +1,29 @@
+.container {
+    padding: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.accordion {
+    background-color: #eee;
+    cursor: pointer;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ddd;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

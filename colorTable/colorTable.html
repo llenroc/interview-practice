@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Domtree travel</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!-- <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script> -->
+    </head>
+    <body>
+        <h1>Hello</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <td style="color: #ff00ff; background-color: #FFFFFF">Q</TD>
+            <td style="background-color: #442244; color: #442244">Y</td>
+            <td style="color: #FFFF00; background-color: #442244">A</td>
+        </tr>
+        <tr>
+            <td style="color: #FFEEFE; background-color: #990000">Q</td>
+            <td style="color: #FFFF00; background-color: #FF0">M</td>
+            <td style="color: #000000; background-color: #FF7777">O</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+<!--   ======================================================================= -->
+    <script>
+   
+
+    var table = document.querySelector("table");
+    console.log ( checkColor(table)  );
+
+    function checkColor (table) {
+    var result = '';
+    
+    var trNum = table.rows.length;
+    // loop through each row
+        for ( var i = 0; i < trNum; i++ ){
+            var row = table.rows[i];
+            // console.log(row.cells.length);
+            var tdNum = row.cells.length;
+            //loop thorugh each cell
+            for ( var j = 0; j < tdNum; j++ ){
+            // compare style color and bgcolor of each cell
+            var cell = row.cells[j];
+            // console.log( 'style color: ', $(cell).css('color')) ;
+            // console.log( 'bg color: ' , $(cell).css('background-color')) ;
+                if( $(cell).css('color') !==  $(cell).css('background-color') ){
+                    result += cell.innerHTML;
+                }
+            } 
+        } 
+        return result;
+        console.log( result);
+    }
+
+
+
+
+
+
+
+
+    </script> 
+    </body>
+</html>

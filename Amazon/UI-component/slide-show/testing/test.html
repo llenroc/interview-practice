@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>event delegation testing</title>
+    <meta name="SlideShow" content="The HTML5 SlideShow">
+    <meta name="daniel" content="SlideShow">
+    <!-- <link rel="stylesheet" href="SlideShow.css"> -->
+</head>
+
+<body>
+
+    <select name="testing select" id="mySelect" onchange="handleChange(event)">
+        <option value="item 1">item 1</option>
+        <option value="item 2">item 2</option>
+        <option value="item 3">item 3</option>
+        <option value="item 4">item 4</option>
+        <option value="item 5">item 5</option>
+    </select>
+
+    <script type="text/javascript">
+        var handleChange = function (event) {
+            debugger;
+            console.log(event.target);
+        };
+    </script>
+</body>
+</htm
