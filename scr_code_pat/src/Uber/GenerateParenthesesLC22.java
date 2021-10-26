@@ -11,17 +11,17 @@ public class GenerateParenthesesLC22 {
         return list;
     }
 
-    private void backtracking(List<String> list, StringBuilder sb, int open, int close, int max){
-        if(sb.length() == max * 2){
+    private void backtracking(List<String> list, StringBuilder sb, int open, int close, int max) {
+        if (sb.length() == max * 2) {
             list.add(sb.toString());
             return;
         }
-        if(open < max){
+        if (open < max) {
             sb.append('(');
             backtracking(list, sb, open + 1, close, max);
             sb.deleteCharAt(sb.length() - 1);
         }
-        if(close < open){
+        if (close < open) {
             sb.append(')');
             backtracking(list, sb, open, close + 1, max);
             sb.deleteCharAt(sb.length() - 1);

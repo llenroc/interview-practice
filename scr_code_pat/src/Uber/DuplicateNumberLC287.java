@@ -8,7 +8,6 @@ public class DuplicateNumberLC287 {
         do {
             tortoise = nums[tortoise];
             hare = nums[hare];
-            hare = nums[hare];
         } while (tortoise != hare);
 
         // Find the "entrance" to the cycle.
@@ -22,12 +21,8 @@ public class DuplicateNumberLC287 {
         return ptr1;
     }
 
-
-
-
-
     public static void main(String[] args) {
-        int[] nums = {2,5,1,1,4,3};
+        int[] nums = { 2, 5, 1, 1, 4, 3 };
 
     }
 }

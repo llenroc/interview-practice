@@ -2,8 +2,6 @@ package Twitter;
 
 public class DesignHitCounterLC362 {
 
-
-
     private int[] times;
     private int[] hits;
     /** Initialize your data structure here. */

@@ -7,8 +7,7 @@ public class InsertIntervalLC57 {
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> result = new LinkedList<>();
         int i = 0;
-        // add all the intervals ending before newInterval starts
-        //
+        // add all the intervals before newInterval
         while (i < intervals.size() && intervals.get(i).end < newInterval.start)
             result.add(intervals.get(i++));
         // merge all overlapping intervals to one considering newInterval
@@ -21,11 +20,10 @@ public class InsertIntervalLC57 {
         }
         result.add(newInterval); // add the union of intervals we got
         // add all the rest
-        while (i < intervals.size()) result.add(intervals.get(i++));
+        while (i < intervals.size())
+            result.add(intervals.get(i++));
         return result;
     }
-
-
 
     public class Interval {
         int start;

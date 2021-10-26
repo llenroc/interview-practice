@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WordBreakLC139",
+            "request": "launch",
+            "mainClass": "Google.WordBreakLC139"
+        }
+    ]
+}
